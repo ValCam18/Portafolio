@@ -1,0 +1,19 @@
+---
+// src/components/ProjectCard.astro
+const { title, description, link } = Astro.props;
+---
+<section id="projectCard" class="w-full py-10">
+  <div>
+    <a href={link} target="_blank" class="flex flex-col justify-between bg-white shadow-md rounded-lg p-4 hover:scale-105 transition-transform min-h-60">
+      <div>
+        <h3 class="text-xl font-bold text-[#c73967]">{title}</h3>
+        <p class="text-gray-600 mt-2">{description}</p>
+      </div>
+      <button class="self-end border border-[#c73967] text-[#c73967] rounded mt-4 px-4 py-2 hover:bg-[#c73967] hover:text-white transition"> 
+        Ver proyecto
+      </button>
+    </a>
+  </div>
+</section>
+
+

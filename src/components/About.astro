@@ -1,0 +1,20 @@
+---
+// src/components/About.astro
+---
+<section id="about" class="w-full py-10">
+  <div class="container px-4">
+    <div class="flex flex-col items-center justify-center space-y-4 text-center">
+      <div class="space-y-4">
+        <h2 class="text-5xl font-bold text-[#ff7b00]">About Me</h2>
+        <slot name="intro" />
+      </div>
+      
+    </div>
+    <div class="mx-auto grid max-w-[1000px] items-center gap-12 py-2 grid-cols-2">
+      <img src="https://www.appollo-systems.com/wp-content/uploads/2023/11/Wavy_Tech-28_Single-06-scaled.jpg" alt="About me" width="400" height="400" class="mx-auto overflow-hidden rounded-xl object-cover object-center hover:scale-105 transition-transform" />
+      <div class="flex flex-col justify-center space-y-4">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

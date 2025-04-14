@@ -1,11 +1,133 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import SkillCard from '../components/SkillCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Hero 
+        name="Valeria Avalos"
+        role="Web Developer"
+        photo="https://canvs.ai/wp-content/uploads/2022/05/developer-api-1024x945.png.webp"
+        description="Creating beautiful, functional, and user-friendly web applications with modern technologies."
+    />
+    <About>
+        <div slot="intro">
+          <p class="mx-auto text-xl">I'm a passionate developer with over 5 years of experience building web applications.</p>
+        </div>
+       
+        <div class="space-y-2">
+          <h3 class="text-xl font-bold text-[#c73967]">My Journey</h3>
+          <p>I started my journey as a web developer in 2018, focusing on front-end technologies. Over the years, I've expanded my skills to include back-end development, cloud services, and DevOps practices.</p>
+        </div>
+        <div class="space-y-2 ">
+          <h3 class="text-xl font-bold text-[#c73967]">My Approach</h3>
+          <p>I believe in creating clean, maintainable code that solves real problems. I'm passionate about user experience and performance optimization.</p>
+        </div>
+        <div class="space-y-2 ">
+          <h3 class="text-xl font-bold text-[#c73967]">When I'm Not Coding</h3>
+          <p>I enjoy hiking, reading science fiction, and experimenting with new cooking recipes. I'm also an avid photographer in my spare time.</p>
+        </div>
+    
+      </About>
+      <section id="skillCard">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+            <div class="space-y-4">
+              <h2 class="text-5xl font-bold text-[#c73967]">Skills &amp; Expertise</h2>
+              <p class="mx-auto text-xl">Here are some of the technologies and tools I work with.</p>
+            </div>
+          </div>
+          <div class="mx-auto grid max-w-[1000px] gap-6 grid-cols-4 ">
+            <SkillCard 
+            name="HTML"
+            icon="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+            level="Advanced"
+            />
+            <SkillCard 
+                name="CSS"
+                icon="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                level="Advanced"
+            />
+            <SkillCard 
+                name="JavaScript"
+                icon="https://seeklogo.com/images/J/java-script-js-logo-ACF4AE5082-seeklogo.com.png"
+                level="Intermediate"
+            />
+            <SkillCard 
+                name="Tailwind"
+                icon="https://nanostack.io/_next/image?url=https%3A%2F%2Fnanostack.s3.ap-south-1.amazonaws.com%2F1708452954835Group%20451.png&w=828&q=75"
+                level="Intermediate"
+            />
+            <SkillCard 
+            name="HTML"
+            icon="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+            level="Advanced"
+            />
+            <SkillCard 
+                name="CSS"
+                icon="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                level="Advanced"
+            />
+            <SkillCard 
+                name="JavaScript"
+                icon="https://seeklogo.com/images/J/java-script-js-logo-ACF4AE5082-seeklogo.com.png"
+                level="Intermediate"
+            />
+            <SkillCard 
+                name="Tailwind"
+                icon="https://nanostack.io/_next/image?url=https%3A%2F%2Fnanostack.s3.ap-south-1.amazonaws.com%2F1708452954835Group%20451.png&w=828&q=75"
+                level="Intermediate"
+            />
+            
+        </div>
+      </section>
+
+      <section id="projectCard">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center mt-10">
+            <div class="space-y-4">
+              <h2 class="text-5xl font-bold text-[#ff7b00] ">Projects</h2>
+              <p class="mx-auto text-xl">Here are some of the projects I've worked on recently.</p>
+            </div>
+          </div>
+          <div class="mx-auto grid max-w-[1000px] gap-6  grid-cols-3 mt-5">
+
+            <ProjectCard 
+            title="Portfolio Personal"
+            description="Sitio web creado con Astro, Tailwind y componentes reutilizables para mostrar mis habilidades y proyectos."
+            link="https://miportafolio.dev"
+            />
+
+            <ProjectCard 
+            title="Gestor de Tareas"
+            description="Aplicación web full stack con autenticación JWT y CRUD de tareas usando React y Node.js."
+            link="https://gestordetareas.app"
+            />
+
+            <ProjectCard 
+            title="Dashboard de Ventas"
+            description="Dashboard interactivo hecho con Power BI y DAX, mostrando métricas clave de rendimiento comercial."
+            link="https://misproyectos.dev/dashboard"
+            />
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center mt-10">
+            <div class="space-y-4">
+              <h2 class="text-5xl font-bold text-[#c73967] ">Get In Touch</h2>
+              <p class="mx-auto text-xl">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+            </div>
+          </div>
+          <div class="mx-auto  max-w-[1000px]">
+
+        <ContactForm />
+
+
+        </div>
+      </section>
+    
+
 </Layout>
