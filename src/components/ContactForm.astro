@@ -1,16 +1,53 @@
 ---
-import ContactFormClient from './ContactFormClient.jsx';
+// import ContactFormClient from './ContactFormClient.jsx';
 ---
 
-<ContactFormClient client:load />
+<!-- <ContactFormClient client:load /> -->
+
+<!-- ---
+// ContactForm.astro
+--- -->
+<!-- 
+<form 
+  action="https://formspree.io/f/xyzwqqkb" 
+  method="POST"
+  class="flex flex-col space-y-4 max-w-md mx-auto"
+>
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    class="p-3 border rounded"
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+    class="p-3 border rounded"
+  />
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    required
+    rows="5"
+    class="p-3 border rounded"
+  ></textarea>
+  <button
+    type="submit"
+    class="bg-[#c73967] text-white px-6 py-2 rounded hover:bg-[#a62d55]"
+  >
+    Send Message
+  </button>
+</form> -->
 
 
 
 <!-- 
-
 <section id="contact" class="w-full py-4">
     <div class="container">
-    <form class="space-y-4">
+    <form action="https://formspree.io/f/xyzwqqkb"  method="POST" class="space-y-4">
         <div class="grid grid-cols-2 gap-4">
             <div class="space-y-2">
                 <label for="name" class="block text-m font-medium mb-1">Name</label>
@@ -35,4 +72,54 @@ import ContactFormClient from './ContactFormClient.jsx';
 </div>
 </div>
 </div>
-</section> -->
+</section>  -->
+
+<form action="https://formspree.io/f/xyzwqqkb" method="POST" class="space-y-4">
+  <div class="grid grid-cols-2 gap-4">
+    <div class="space-y-2">
+      <label for="name" class="block text-m font-medium mb-1">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name" 
+        placeholder="Tu nombre"
+        required
+        class="block w-full h-10 rounded-md border border-gray-400 px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#c73967] focus:border-[#c73967]"
+      />
+    </div>
+    <div class="space-y-2">
+      <label for="email" class="block text-m font-medium mb-1">Email</label>
+      <input
+        id="email"
+        name="email" 
+        placeholder="Your email"
+        type="email"
+        required
+        class="block w-full h-10 rounded-md border border-gray-400 px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#c73967] focus:border-[#c73967]"
+      />
+    </div>
+  </div>
+  <div class="space-y-2">
+    <label for="subject" class="block text-m font-medium mb-1">Subject</label>
+    <input
+      id="subject"
+      name="subject" 
+      placeholder="Subject of your message"
+      required
+      class="block w-full h-10 rounded-md border border-gray-400 px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#c73967] focus:border-[#c73967]"
+    />
+  </div>
+  <div class="space-y-2">
+    <label for="message" class="block text-m font-medium mb-1">Message</label>
+    <textarea
+      id="message"
+      name="message" 
+      required
+      class="block w-full h-10 rounded-md border border-gray-400 px-3 py-2 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#c73967] focus:border-[#c73967] min-h-[150px]"
+      placeholder="Your message"
+    ></textarea>
+  </div>
+  <button class="bg-[#ff7b00] text-white rounded px-4 py-2 w-full" type="submit">
+    Send Message
+  </button>
+</form>
