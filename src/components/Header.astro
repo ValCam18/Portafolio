@@ -1,10 +1,10 @@
 ---
 // src/components/Header.astro
 ---
-<header class="w-full bg-white p-6 shadow-md">
+<header id="Header" class="fixed top-0 left-0 w-full bg-white p-6 shadow-md z-50">
   <div class="container flex items-center justify-between">
     <div class="flex items-center gap-2">
-      <a href="/" class="px-5 font-bold text-xl text-[#c73967]">VAQ</a>
+      <a href="/" class="px-5 font-bold text-xl text-[#7126d9]">VAQ</a>
     </div>
     <button class="md:hidden" id="icon-menu">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6">
@@ -14,18 +14,18 @@
       </svg>
     </button>
     <nav class="hidden md:flex items-center gap-6">
-      <a href="#about" class="text-sm font-medium hover:scale-115 transition-transform hover:text-[#c73967]">About</a>
-      <a href="#skillCard" class="text-sm font-medium  hover:scale-115 transition-transform hover:text-[#c73967]">Skills</a>
-      <a href="#projectCard" class="text-sm font-medium  hover:scale-115 transition-transform hover:text-[#c73967]">Projects</a>
-      <a href="#contact" class="text-sm font-medium  hover:scale-115 transition-transform hover:text-[#c73967]">Contact</a>
+      <a href="#about" class="text-sm font-medium hover:scale-115 transition-transform hover:text-[#7126d9]">Sobre mí</a>
+      <a href="#skillCard" class="text-sm font-medium  hover:scale-115 transition-transform hover:text-[#7126d9]">Habilidades</a>
+      <a href="#projectCard" class="text-sm font-medium  hover:scale-115 transition-transform hover:text-[#7126d9]">Proyectos</a>
+      <a href="#contact" class="text-sm font-medium  hover:scale-115 transition-transform hover:text-[#7126d9]">Contacto</a>
     </nav>
   </div>
 <!-- Menú desplegable -->
   <nav id="menu-responsive" class="md:hidden hidden flex flex-col gap-6 bg-white p-4 shadow-lg">
-    <a href="#about" class="text-sm font-medium   hover:text-[#c73967]">About</a>
-    <a href="#skillCard" class="text-sm font-medium   hover:text-[#c73967]">Skills</a>
-    <a href="#projectCard" class="text-sm font-medium   hover:text-[#c73967]">Projects</a>
-    <a href="#contact" class="text-sm font-medium   hover:text-[#c73967]">Contact</a>
+    <a href="#about" class="text-sm font-medium   hover:text-[#7126d9]">Sobre mí</a>
+    <a href="#skillCard" class="text-sm font-medium   hover:text-[#7126d9]">Habilidades</a>
+    <a href="#projectCard" class="text-sm font-medium   hover:text-[#7126d9]">Proyectos</a>
+    <a href="#contact" class="text-sm font-medium   hover:text-[#7126d9]">Contacto</a>
   </nav>
 </header>
 
