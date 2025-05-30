@@ -1,14 +1,26 @@
 ---
 // src/components/SkillCard.astro
-const { name, icon, level } = Astro.props;
+const { name, icon, technologies = [] } = Astro.props;
 ---
-<section id="skillCard" class="w-full py-4">
-  <div class="bg-[#f9f7fc] shadow-md rounded-lg p-4 flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 hover:scale-105 transition-transform">
-    <img src={icon} alt={name} class="w-10 h-10 mb-2 sm:mb-0" />
-    <div class="text-center sm:text-left">
-      <h3 class="font-semibold text-lg">{name}</h3>
-      <p class="text-sm text-gray-500">{level}</p>
+<section id="skillCard" class="w-full py-6">
+  <div class="flex flex-wrap justify-center gap-6">
+    
+    <div class="w-[320px] sm:w-[400px] h-[220px] rounded-lg border bg-white shadow-md p-6 text-[#7126d9] transition-transform duration-300 ease-in-out transform hover:scale-105 flex flex-col sm:flex-row items-center gap-4">
+      <img src={icon} alt={name} class="w-12 h-12 p-2 rounded-full bg-white border border-[#e0d9f9] shadow-sm" />
+      <div class="text-center sm:text-left">
+        <h3 class="font-bold text-lg text-[#7126d9]">{name}</h3>
+        <div class="flex flex-wrap gap-2 mt-2 justify-center sm:justify-start">
+          {technologies.map(tech => (
+            <span class="inline-block bg-white text-[#5a3ea8] text-sm font-medium px-3 py-1 rounded-full border border-[#b3a1f9] max-w-full truncate">
+
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
-</section> 
+</section>
+
+
 

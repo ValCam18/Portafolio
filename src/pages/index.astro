@@ -3,18 +3,27 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import SkillCard from '../components/SkillCard.astro';
+
 import ProjectCard from '../components/ProjectCard.astro';
 import ContactForm from '../components/ContactForm.astro';
+
+
+
+
 ---
+
+
 
 <Layout>
 
   <!-- HERO -->
+  
 	<Hero 
         name="Valeria"
         lastname="Avalos"
         role="Ingeniera de Computación y Sistemas y Diseñadora UX/UI"
         photo="src/assets/Hero.png"
+        
         description="Construyendo soluciones elegantes a problemas complejos con tecnologías modernas."
     />
 
@@ -52,7 +61,7 @@ import ContactForm from '../components/ContactForm.astro';
 
 
   <!-- HABILIDADES -->
-     <section id="skillCard" class="w-full h-screen flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16">
+     <section id="skillCard" class="w-full  flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16 py-20">
       <div class="max-w-7xl mx-auto  w-full">  
       <div class="flex flex-col">
 
@@ -64,48 +73,36 @@ import ContactForm from '../components/ContactForm.astro';
             </div>
           </div>
 
-          <div class="mx-auto grid max-w-7xl gap-6 grid-cols-4 ">
+         <div class="mx-auto grid max-w-7xl gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+
+         
+
+            <SkillCard 
+              name="Desarrollo Frontend" 
+              icon="https://img.icons8.com/?size=100&id=87268&format=png&color=7e3bdc"
+              technologies={["React", "Tailwind CSS", "CSS"]}
+            />
+            <SkillCard 
+              name="Diseño UI/UX" 
+              icon="https://img.icons8.com/?size=100&id=21940&format=png&color=7e3bdc"
+              technologies={["Figma", "Sketch", "PhotoShop"]} 
+            />
+            <SkillCard 
+              name="Herramientas y Tecnologías" 
+              icon="https://img.icons8.com/?size=100&id=14600&format=png&color=7e3bdc"
+              technologies={["Git", "GitHub", "PhotoShop"]} 
+            />
+            <SkillCard 
+              name="Base de Datos" 
+              icon="https://img.icons8.com/?size=100&id=CL9FYPTHMfLp&format=png&color=7e3bdc"
+              technologies={["MongoDB", "MySQL", "Firebase"]} 
+            />
             
-            <SkillCard 
-            name="HTML"
-            icon="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
-            level="Advanced"
-            />
-            <SkillCard 
-                name="CSS"
-                icon="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                level="Advanced"
-            />
-            <SkillCard 
-                name="JavaScript"
-                icon="https://seeklogo.com/images/J/java-script-js-logo-ACF4AE5082-seeklogo.com.png"
-                level="Intermediate"
-            />
-            <SkillCard 
-                name="Tailwind"
-                icon="https://nanostack.io/_next/image?url=https%3A%2F%2Fnanostack.s3.ap-south-1.amazonaws.com%2F1708452954835Group%20451.png&w=828&q=75"
-                level="Intermediate"
-            />
-            <SkillCard 
-            name="HTML"
-            icon="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
-            level="Advanced"
-            />
-            <SkillCard 
-                name="CSS"
-                icon="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-                level="Advanced"
-            />
-            <SkillCard 
-                name="JavaScript"
-                icon="https://seeklogo.com/images/J/java-script-js-logo-ACF4AE5082-seeklogo.com.png"
-                level="Intermediate"
-            />
-            <SkillCard 
-                name="Tailwind"
-                icon="https://nanostack.io/_next/image?url=https%3A%2F%2Fnanostack.s3.ap-south-1.amazonaws.com%2F1708452954835Group%20451.png&w=828&q=75"
-                level="Intermediate"
-            />  
+
+            
+          
+            
+             
             </div>
         </div>
       </section>
@@ -114,7 +111,7 @@ import ContactForm from '../components/ContactForm.astro';
 
 
 <!-- PROYECTOS -->
-      <section id="projectCard" class="w-full h-screen flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16">
+      <section id="projectCard" class="w-full flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16 py-20">
         <div class="max-w-7xl mx-auto  w-full">  
 
         <div class="flex flex-col">
@@ -127,13 +124,15 @@ import ContactForm from '../components/ContactForm.astro';
             </div>
           </div>
         
-          <div class="mx-auto grid max-w-7xl gap-6  grid-cols-3 mt-5">
+          <div class="mx-auto grid max-w-7xl gap-6 mt-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+
 
             <ProjectCard 
             title="Portafolio Personal"
             description="Sitio web construido con Astro, Tailwind y componentes reutilizables para mostrar mis habilidades y proyectos."
             link="https://miportafolio.dev"
-              technologies={['React', 'Tailwind CSS', 'Node.js']}
+            technologies={['React', 'Tailwind CSS', 'Node.js', 'Hola']}
 
             />
 
@@ -141,7 +140,7 @@ import ContactForm from '../components/ContactForm.astro';
             title="To-Do App"
             description="Aplicación web full stack con autenticación JWT y gestión de tareas (CRUD) usando React y Node.js."
             link="https://gestordetareas.app"
-              technologies={['React', 'Tailwind CSS', 'Node.js']}
+            technologies={['React', 'Tailwind CSS', 'Node.js']}
 
             />
 
@@ -161,7 +160,7 @@ import ContactForm from '../components/ContactForm.astro';
 
 <!-- CONTACTO -->
 
-      <section id="contact" class="w-full  bg-[#f9f7fc] pt-21 pb-15 items-center justify-center px-4 md:px-8 lg:px-16">
+      <section id="contact" class="w-full  bg-[#f9f7fc] items-center justify-center px-4 md:px-8 lg:px-16 py-20">
          <div class="max-w-7xl mx-auto w-full">  
         <div class="flex flex-col">
             <div class="space-y-4">
@@ -171,7 +170,7 @@ import ContactForm from '../components/ContactForm.astro';
             </div>
           </div>
         
-        <div class="mx-auto  max-w-7xl">
+        <div class="mx-auto  max-w-7xl flex flex-col md:flex-row gap-6">
         <ContactForm />
         </div>
         </div>

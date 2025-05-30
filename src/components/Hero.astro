@@ -3,7 +3,7 @@
 const { name, lastname, role, photo, description } = Astro.props;
 ---
 
-<section id="Hero" class="w-full h-screen flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16">
+<section id="Hero" class="w-full flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16 py-20">
   <div class="max-w-7xl mx-auto px-4">
 
     <div class="grid grid-cols-2 gap-6">
@@ -24,6 +24,7 @@ const { name, lastname, role, photo, description } = Astro.props;
             <button class="bg-white border border-[#e7e2f0] rounded-md text-[#393456] h-10 px-4 py-2 hover:scale-105 transition-transform font-semibold hover:bg-[#7126d9] hover:text-[#ffff] whitespace-nowrap">Ver proyectos</button>
           </a>
         </div>
+        
         <div class="flex gap-4 ">
             <a href="https://github.com" target="_blank" class="text-[#5e5e5e]" >
               <button class="inline-flex items-center justify-center gap-2 h-12 w-12 hover:scale-115 transition-transform hover:text-[#7126d9] hover:rotate-12">

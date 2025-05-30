@@ -1,0 +1,67 @@
+---
+// SkillAccordion.astro
+const { id, iconClass, title, subtitle, skills = [], active = false } = Astro.props;
+---
+
+<!-- Header con ícono, título, subtítulo y flecha -->
+<div 
+  class="accordion-header flex justify-between items-center cursor-pointer p-4 rounded-lg shadow-md bg-white mb-2 transition-all duration-300 border hover:bg-violet-50"
+  data-target={`#${id}`}
+>
+
+  <div class="flex items-center gap-4">
+    <i class={`uil ${iconClass} text-2xl text-violet-600`}></i>
+    <div>
+      <h1 class="text-lg font-semibold text-gray-800">{title}</h1>
+      <span class="text-sm text-gray-500">{subtitle}</span>
+    </div>
+  </div>
+  <i class="uil uil-angle-down text-xl text-gray-600 transition-transform duration-300"></i>
+
+</div>
+
+<!-- Contenido del acordeón -->
+<div id={id} class="accordion-content hidden px-4 pb-4">
+
+  <div class="grid gap-4">
+    {skills.map(skill => (
+      <div class="w-full">
+        <div class="flex justify-between mb-1">
+          <h3 class="text-sm font-medium text-gray-700">{skill.name}</h3>
+          <span class="text-sm text-gray-500">{skill.level}%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+          <div class="bg-violet-500 h-2 rounded-full" style={`width: ${skill.level}%;`}></div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const targetId = header.getAttribute('data-target');
+        const content = document.querySelector(targetId);
+
+        // Toggle clase `hidden`
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+
+        // (Opcional) Cambiar ícono de flecha o añadir animación
+        const arrowIcon = header.querySelector('.uil-angle-down');
+        if (arrowIcon) {
+          arrowIcon.classList.toggle('rotate-180'); // gira flecha
+          arrowIcon.classList.add('transition-transform', 'duration-300');
+        }
+      });
+    });
+  });
+</script>
+
