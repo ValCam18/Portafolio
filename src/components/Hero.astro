@@ -2,8 +2,10 @@
 // src/components/Hero.astro
 const { name, lastname, role, photo, description } = Astro.props;
 ---
-<section id="Hero" class="w-full h-screen flex flex-col items-center justify-center px-4 bg-[#f9f7fc]">
-  <div class="container px-4 ">
+
+<section id="Hero" class="w-full h-screen flex flex-col items-center justify-center bg-[#f9f7fc] px-4 md:px-8 lg:px-16">
+  <div class="max-w-7xl mx-auto px-4">
+
     <div class="grid grid-cols-2 gap-6">
       <div class="flex flex-col justify-center space-y-4">
         <div class="space-y-2">
@@ -19,7 +21,7 @@ const { name, lastname, role, photo, description } = Astro.props;
             <button class="bg-[#7126d9] rounded-md text-white h-10 px-4 py-2 hover:scale-105 transition-transform hover:bg-[#7d3adc] font-semibold">Contáctame</button>
           </a>
           <a href="#projectCard">
-    <button class="bg-white border border-[#e7e2f0] rounded-md text-[#393456] h-10 px-4 py-2 hover:scale-105 transition-transform font-semibold hover:bg-[#7126d9] hover:text-[#ffff] whitespace-nowrap">Ver proyectos</button>
+            <button class="bg-white border border-[#e7e2f0] rounded-md text-[#393456] h-10 px-4 py-2 hover:scale-105 transition-transform font-semibold hover:bg-[#7126d9] hover:text-[#ffff] whitespace-nowrap">Ver proyectos</button>
           </a>
         </div>
         <div class="flex gap-4 ">
