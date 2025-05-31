@@ -1,7 +1,7 @@
 # 🚀 Portafolio Personal
 
 ¡Bienvenido a mi portafolio! 🎉  
-Aquí muestro mis proyectos, habilidades y todo lo que he construido usando **Astro**, **Tailwind CSS** y **JavaScript**.
+Aquí comparto mis proyectos, habilidades y quién soy, todo construido con **Astro**, **Tailwind CSS** y **JavaScript**.
 
 ---
 
@@ -13,11 +13,13 @@ Aquí muestro mis proyectos, habilidades y todo lo que he construido usando **As
 
 ---
 
-## ✨ Características
+## ✨ Secciones del Portafolio
 
-- 📱 Diseño completamente responsive (móvil, tablet, escritorio)  
-- 🚀 Rápido y optimizado para la mejor experiencia  
-- 🧩 Secciones claras: Sobre mí, Proyectos, Habilidades y Contacto  
+- 👋 **Hero** – Introducción y bienvenida  
+- 🙋‍♂️ **Sobre mí** – Un poco sobre mi experiencia y quién soy  
+- 💪 **Habilidades** – Las tecnologías y herramientas que manejo  
+- 📂 **Proyectos** – Algunos de mis trabajos y desarrollos destacados  
+- 📬 **Contacto** – Cómo comunicarte conmigo  
 
 ---
 
